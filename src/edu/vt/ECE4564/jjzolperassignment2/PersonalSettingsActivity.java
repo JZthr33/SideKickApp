@@ -26,17 +26,12 @@ public class PersonalSettingsActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
-				// One would hope at some point this location would be taken
-				// automatically from
-				// the GPS sensor and we just tell them we are, and it would be
-				// used that
-				// way to actually filter the results. But until then:
 				final String radiusFilter = inputRadius_.getText().toString();
 				final String typeFilter = inputType_.getText().toString();
 
 				Intent mapIntent = new Intent(getApplicationContext(),
 						MapActivity.class);
-				
+
 				mapIntent.putExtra("RadiusFilter", radiusFilter);
 				mapIntent.putExtra("TypeFilter", typeFilter);
 				startActivity(mapIntent);
